@@ -27,7 +27,7 @@ const GALLERY_PROJECTS = [
 ];
 
 const GALLERY_PHOTOS = [
-  { src: 'assets/gallery/demo-landscape.jpg', caption: 'Example photo — replace with a real Greening Women Enterprises photo', project: 'greening-women-enterprises' },
-  { src: 'assets/gallery/demo-portrait.jpg', caption: 'Example photo — replace with a real Climate-Smart Agriculture photo', project: 'climate-smart-agriculture' },
-  { src: 'assets/gallery/demo-square.jpg', caption: 'Example photo — replace with a real Views from the Frontline photo', project: 'views-from-the-frontline' },
+  { src: 'assets/gallery/demo-landscape.jpg', caption: 'Greening Women Enterprises photo', project: 'greening-women-enterprises' },
+  { src: 'assets/gallery/demo-portrait.jpg', caption: 'Climate-Smart Agriculture photo', project: 'climate-smart-agriculture' },
+  { src: 'assets/gallery/demo-square.jpg', caption: 'Views from the Frontline photo', project: 'views-from-the-frontline' },
 ];
