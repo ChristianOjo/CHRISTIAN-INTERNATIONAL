@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Team — Christian International</title>
+<title>Gallery — Christian International</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,8 +21,8 @@
       <a href="about.html" class="">About</a>
       <a href="projects.html" class="">Projects</a>
       <a href="partners.html" class="">Partners</a>
-      <a href="team.html" class="is-active">Team</a>
-      <a href="gallery.html" class="">Gallery</a>
+      <a href="team.html" class="">Team</a>
+      <a href="gallery.html" class="is-active">Gallery</a>
       <a href="contact.html" class="nav-cta">Get in touch</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -45,54 +45,29 @@
     </svg>
   </div>
   <div class="page-header-inner">
-    <p class="eyebrow eyebrow--gold">Leadership &amp; staff</p>
-    <h1 class="page-title">Team</h1>
-    <p class="page-lede">The people steering the work.</p>
+    <p class="eyebrow eyebrow--gold">Photos from the field</p>
+    <h1 class="page-title">Gallery</h1>
+    <p class="page-lede">Photos from our projects, staff, and the communities we work alongside &mdash; added over time.</p>
   </div>
 </section>
-<section class="team">
-  <div class="section-inner">
-    <div class="leader-row">
-      <div class="leader-card reveal">
-        <div class="avatar avatar--rust">JO</div>
-        <p class="leader-name">Johnson Ojo</p>
-        <p class="leader-role">Director</p>
-      </div>
-      <div class="leader-card reveal">
-        <div class="avatar avatar--green">NS</div>
-        <p class="leader-name">Nondumision Sithole</p>
-        <p class="leader-role">Project Manager</p>
-      </div>
-      <div class="leader-card reveal">
-        <div class="avatar avatar--gold">HM</div>
-        <p class="leader-name">Happiness Magagula</p>
-        <p class="leader-role">Finance Manager</p>
-      </div>
-      <div class="leader-card reveal">
-        <div class="avatar avatar--teal">ND</div>
-        <p class="leader-name">Nathie Dlamini</p>
-        <p class="leader-role">Secretary</p>
-      </div>
-      <div class="leader-card reveal">
-        <div class="avatar avatar--photo"><img src="assets/christian-ojo.jpg" alt="Christian I. Ojo"></div>
-        <p class="leader-name">Christian I. Ojo</p>
-        <p class="leader-role">IT Consultant</p>
-      </div>
-    </div>
 
-    <p class="eyebrow eyebrow--gold reveal staff-eyebrow">Staff</p>
-    <div class="staff-grid">
-      <div class="staff-card reveal"><div class="avatar avatar--sm avatar--rust">AS</div><p>Adjirackor J. Siphesihle</p></div>
-      <div class="staff-card reveal"><div class="avatar avatar--sm avatar--green">ZD</div><p>Ziyanda Dlamini</p></div>
-      <div class="staff-card reveal"><div class="avatar avatar--sm avatar--gold">AM</div><p>Ayanda Mkhulisi</p></div>
-      <div class="staff-card reveal"><div class="avatar avatar--sm avatar--teal">SK</div><p>Samkelisiwe Kunene</p></div>
-      <div class="staff-card reveal"><div class="avatar avatar--sm avatar--rust">BN</div><p>Busisiwe Nxumalo</p></div>
-      <div class="staff-card reveal"><div class="avatar avatar--sm avatar--green">PX</div><p>Phephile L. Xaba</p></div>
-      <div class="staff-card reveal"><div class="avatar avatar--sm avatar--gold">WD</div><p>Welile Z. Dlamini</p></div>
-      <div class="staff-card reveal"><div class="avatar avatar--sm avatar--teal">FS</div><p>Futhi Sibandze</p></div>
-    </div>
+<section class="gallery">
+  <div class="section-inner">
+    <div class="gallery-tabs" id="galleryTabs"></div>
+    <div class="gallery-grid" id="galleryGrid"></div>
   </div>
 </section>
+
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">&larr;</button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">&rarr;</button>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+</div>
+
 <footer class="footer">
   <div class="section-inner footer-inner">
     <div class="footer-brand">
@@ -110,6 +85,7 @@
     <p class="footer-copy">&copy; 2026 Christian International &middot; Nhlangano, Eswatini</p>
   </div>
 </footer>
+<script src="assets/gallery-data.js"></script>
 <script src="assets/script.js"></script>
 </body>
 </html>

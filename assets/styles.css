@@ -455,6 +455,140 @@ a { color: inherit; }
 .contact-mark svg { width: 100%; height: 100%; }
 .contact-cta { margin-top: 40px; }
 
+/* ---------- GALLERY ---------- */
+.gallery { padding: 96px 0; background: var(--bg-cream); }
+.gallery-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 40px;
+}
+.gallery-tab {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: var(--bone);
+  color: var(--ink-dim);
+  border: 1.5px solid transparent;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.gallery-tab:hover { border-color: var(--rust-deep); }
+.gallery-tab.is-active { background: var(--rust); color: var(--bone); }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-auto-rows: 8px;
+}
+.gallery-item {
+  margin: 0;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--bone);
+  border: 3px solid var(--bone);
+  box-shadow: 0 10px 24px rgba(28,17,8,0.10);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.gallery-item:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(28,17,8,0.18); }
+.gallery-item img { width: 100%; height: auto; display: block; }
+.gallery-item figcaption {
+  padding: 10px 4px 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.gallery-item-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--rust-deep);
+  font-weight: 700;
+}
+.gallery-item-caption {
+  font-size: 13px;
+  color: var(--ink-dim);
+  line-height: 1.4;
+}
+.gallery-empty {
+  grid-column: 1 / -1;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--ink-dim);
+  text-align: center;
+  padding: 60px 0;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(28,17,8,0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.lightbox.is-open { display: flex; }
+.lightbox-content {
+  position: relative;
+  max-width: 1100px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 78vh;
+  border-radius: 4px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+}
+.lightbox-caption {
+  color: var(--bone-dim);
+  font-size: 14px;
+  margin: 18px 0 0;
+  text-align: center;
+  max-width: 700px;
+}
+.lightbox-close {
+  position: absolute;
+  top: -44px; right: 0;
+  background: none;
+  border: none;
+  color: var(--bone);
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 6px;
+}
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(245,235,217,0.12);
+  border: none;
+  color: var(--bone);
+  font-size: 26px;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s ease;
+}
+.lightbox-nav:hover { background: rgba(245,235,217,0.24); }
+.lightbox-prev { left: -60px; }
+.lightbox-next { right: -60px; }
+
 /* ---------- FOOTER ---------- */
 .footer { background: var(--bg-dark); padding: 48px 0; }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
@@ -474,6 +608,9 @@ a { color: inherit; }
   .staff-grid { grid-template-columns: 1fr 1fr; }
   .contact-inner { flex-direction: column; align-items: flex-start; }
   .contact-mark { display: none; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
 }
 @media (max-width: 640px) {
   .nav-links {
@@ -500,6 +637,9 @@ a { color: inherit; }
   .leader-row { justify-content: center; }
   .contact { padding: 70px 0; }
   .footer-links { flex-wrap: wrap; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .lightbox { padding: 16px; }
+  .lightbox-close { top: -38px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
